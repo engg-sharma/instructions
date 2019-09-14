@@ -1,0 +1,29 @@
+grep results
+
+share/gnome-shell/application_state:25:    <application id="icecat.desktop" open-window-count="1" score="54.6953125" last-seen="1568440213"/>
+share/applications/icecat.desktop:4:Exec=/user/share/icecat/icecat %u
+share/applications/icecat.desktop:8:Icon=usr/share/icecat/browser/icons/mozicon128.png
+
+
+* share/gnome-shell/application_state:25:    <application id="icecat.desktop" open-window-count="1" score="54.6953125" last-seen="1568440213"/>
+ => not sure is needed to configure manually
+
+* create a file
+ => /home/arsenalfc/.local/share/applications/icecat.desktop
+ => file contents below
+ => this file is almost a copy for mozilla with subtle differences
+
+`
+[Desktop Entry]
+Name=Icecat Web Browser
+Keywords=Internet;WWW;Browser;Web;Explorer
+Exec=/user/share/icecat/icecat %u
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=usr/share/icecat/browser/icons/mozicon128.png
+Categories=GNOME;GTK;Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/rss+xml;application/rdf+xml;image/gif;image/jpeg;image/png;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;x-scheme-handler/chrome;video/webm;application/x-xpinstall;
+StartupNotify=true
+Actions=NewWindow;NewPrivateWindow;
+`
